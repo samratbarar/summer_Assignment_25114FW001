@@ -11,9 +11,9 @@ public class Question_1 {
         System.out.println("Enter the value of N ");
         int N = sc.nextInt();
 
-        int sum = 0;
+        int sum = 1;
 
-        for(int i = 1; i <= N; i++) {
+        for(int i = 2; i <= N; i++) {
             sum += i;
         }
 
