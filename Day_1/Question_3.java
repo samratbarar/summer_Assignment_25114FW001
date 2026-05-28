@@ -10,6 +10,12 @@ public class Question_3 {
         System.out.println("Enter the number ");
         int num = sc.nextInt();
 
-        
+        int fact = 1;
+
+        for(int i = 2; i <= num; i++) {
+            fact *= i;
+        }
+         
+        System.out.println("The Factorial of " + num + " is " + fact);
     }   
 }
