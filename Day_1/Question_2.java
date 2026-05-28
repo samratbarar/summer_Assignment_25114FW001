@@ -4,7 +4,7 @@ import java.util.*;
 
 // Write a program to Print multiplication table of a given number
 
-public class Qustion_2 {
+public class Question_2 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 
