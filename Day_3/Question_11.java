@@ -13,13 +13,7 @@ public class Question_11 {
         int num2 = sc.nextInt();
 
         int gcd = 1;
-        int min = num1;
-
-        if (num1 > num2) {
-            min = num2;
-        } else if (num1 < num2) {
-            min = num1;
-        }
+        int min = Math.min(num1, num2);
 
         // gcd is greatest number which can divide both numbers
 
