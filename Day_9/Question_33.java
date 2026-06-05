@@ -15,7 +15,7 @@ public class Question_33 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter the height of half pyramid with repeated number ");
+        System.out.println("Enter the height of inverted half pyramid ");
         int height = sc.nextInt();
 
         for (int i = height; i > 0; i--) {
