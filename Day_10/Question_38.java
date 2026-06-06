@@ -15,7 +15,7 @@ public class Question_38 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter the height of star pyramid ");
+        System.out.println("Enter the height of reverse star pyramid ");
         int height = sc.nextInt();
 
         for (int i = height; i > 0; i--) {
