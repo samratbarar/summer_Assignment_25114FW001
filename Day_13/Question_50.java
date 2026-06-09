@@ -2,9 +2,9 @@ package summer_Assignment_25114FW001.Day_13;
 
 import java.util.*;
 
-// Write a program to Input and display array. 
+// Write a program to Find sum and average of array.
 
-public class Question_49 {
+public class Question_50 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -13,19 +13,21 @@ public class Question_49 {
 
         int[] arr = new int[length];
 
-        // input array
+        // inputing array
         System.out.println("Enter integer element of array");
         for (int i = 0; i < length; i++) {
             arr[i] = sc.nextInt();
         }
 
-        // display array
-        System.out.println("Array Elemnts are ");
+        // finding sum
+        int sum = 0;
         for (int i = 0; i < length; i++) {
-            System.out.print(arr[i]);
-            if (i != length - 1) {
-                System.out.print(", ");
-            }
+            sum += arr[i];
         }
+
+        // finding average
+        float avg = (float)sum / length;
+
+        System.out.println("Sum and average of array are " + sum + " and " + avg);   
     }
 }
