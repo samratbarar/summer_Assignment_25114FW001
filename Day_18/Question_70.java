@@ -2,9 +2,9 @@ package summer_Assignment_25114FW001.Day_18;
 
 import java.util.*;
 
-// Write a program to Bubble sort. 
+// Write a program to Selection sort. 
 
-public class Question_69 {
+public class Question_70 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -25,15 +25,18 @@ public class Question_69 {
             arr[i] = sc.nextInt();
         }
 
-        // bubble sorting
+        // selection sorting
         for (int i = 0; i < arr.length-1; i++) {
-            for (int j = 0; j < arr.length - 1 - i; j++) {
-                if (arr[j] > arr[j+1]) {
-                    int temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
+            int smallestEleIdx = i;
+            for (int j = i+1; j < arr.length; j++) {
+                if (arr[smallestEleIdx] > arr[j]) {
+                    smallestEleIdx = j;
                 }
             }
+
+            int temp = arr[smallestEleIdx];
+            arr[smallestEleIdx] = arr[i];
+            arr[i] = temp;
         }
 
         // printing sorted array
