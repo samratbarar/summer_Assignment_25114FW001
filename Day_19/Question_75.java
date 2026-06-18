@@ -22,7 +22,7 @@ public class Question_75 {
         // inputing array
         System.out.println("Enter integer element of marix ");
         for (int i = 0; i < row; i++) {
-            System.out.println("Enter " + (i + 1) + " row of matrix 1 ");
+            System.out.println("Enter " + (i + 1) + " row of matrix ");
             for (int j = 0; j < col; j++) {
                 mat[i][j] = sc.nextInt();
             }
