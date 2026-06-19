@@ -20,7 +20,7 @@ public class Question_73 {
         int[][] mat = new int[row][col];
 
         // inputing array
-        System.out.println("Enter integer element of marix 1 ");
+        System.out.println("Enter integer element of matrix 1 ");
         for (int i = 0; i < row; i++) {
             System.out.println("Enter " + (i+1) + " row of matrix 1 ");
             for (int j = 0; j < col; j++) {
@@ -29,7 +29,7 @@ public class Question_73 {
         }
 
         // inputing second array and finding sum
-        System.out.println("Enter integer element of marix 2 ");
+        System.out.println("Enter integer element of matrix 2 ");
         for (int i = 0; i < row; i++) {
             System.out.println("Enter " + (i+1) + " row of matrix 2 ");
             for (int j = 0; j < col; j++) {

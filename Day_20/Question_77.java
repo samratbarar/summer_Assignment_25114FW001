@@ -25,7 +25,7 @@ public class Question_77 {
         int[][] multi = new int[row1][col2];
 
         // inputing array 1
-        System.out.println("Enter integer element of marix 1 ");
+        System.out.println("Enter integer element of matrix 1 ");
         for (int i = 0; i < row1; i++) {
             System.out.println("Enter " + (i+1) + " row of matrix 1 ");
             for (int j = 0; j < col1; j++) {
@@ -34,7 +34,7 @@ public class Question_77 {
         }
 
         // inputing second array 
-        System.out.println("Enter integer element of marix 2 ");
+        System.out.println("Enter integer element of matrix 2 ");
         for (int i = 0; i < row2; i++) {
             System.out.println("Enter " + (i+1) + " row of matrix 2 ");
             for (int j = 0; j < col2; j++) {

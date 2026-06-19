@@ -20,7 +20,7 @@ public class Question_75 {
         int[][] mat = new int[row][col];
 
         // inputing array
-        System.out.println("Enter integer element of marix ");
+        System.out.println("Enter integer element of matrix ");
         for (int i = 0; i < row; i++) {
             System.out.println("Enter " + (i + 1) + " row of matrix ");
             for (int j = 0; j < col; j++) {

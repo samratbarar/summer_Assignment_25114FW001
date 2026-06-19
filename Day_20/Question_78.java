@@ -1,14 +1,14 @@
-package summer_Assignment_25114FW001.Day_19;
+package summer_Assignment_25114FW001.Day_20;
 
 import java.util.*;
 
-// Write a program to Find diagonal sum. 
+// Write a program to Check symmetric matrix. 
 
-public class Question_76 {
+public class Question_78 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter square matrix dimension");
+        System.out.println("Enter the dimension of square matrix ");
         int dim = sc.nextInt();
 
         if (dim <= 0) {
@@ -19,27 +19,27 @@ public class Question_76 {
 
         int[][] mat = new int[dim][dim];
 
-        // inputing array
+        // inputing array 1
         System.out.println("Enter integer element of matrix ");
         for (int i = 0; i < dim; i++) {
-            System.out.println("Enter " + (i + 1) + " row of matrix ");
+            System.out.println("Enter " + (i+1) + " row of matrix ");
             for (int j = 0; j < dim; j++) {
                 mat[i][j] = sc.nextInt();
             }
         }
 
-        // finding diagonal sum
-        int sum = 0;
+        // checking the symmetric of matrix
         for (int i = 0; i < dim; i++) {
-            sum += mat[i][i];  // primary diagonal
-
-            if (i != (dim - 1 - i)) {
-                sum += mat[i][dim - i - 1];
+            for (int j = i+1; j < dim; j++) {
+                if (mat[i][j] != mat[j][i]) {
+                    System.out.println("This matrix is not symmetric ");
+                    sc.close();
+                    return;
+                }
             }
         }
 
-       // displaying sum
-       System.out.println("The diagonal element sum is " + sum);
+        System.out.println("This matrix is symmetric");
 
         sc.close();
     }
