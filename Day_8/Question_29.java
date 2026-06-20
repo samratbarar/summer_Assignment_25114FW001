@@ -18,5 +18,6 @@ public class Question_29 {
 
             System.out.println();
         }
-    }
+        sc.close();
+    }   
 }

@@ -24,15 +24,20 @@ public class Question_26 {
             System.out.print(firstTerm + "," + secondTerm);
         } else if (range == 2) {
             System.out.print(firstTerm + "," + secondTerm);
+            sc.close();
             return;
         } else if (range == 1) {
             System.out.print(firstTerm);
+            sc.close();
             return;
         } else {
             System.out.println("Invalid range");
+            sc.close();
             return;
         }
 
         fibonacci(firstTerm, secondTerm, range-2);
+
+        sc.close();
     }
 }

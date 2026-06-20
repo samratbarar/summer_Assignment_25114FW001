@@ -18,5 +18,7 @@ public class Question_22 {
         }
 
         System.out.println("Conversion of given binary number into decimal is " + deciNum);
+
+        sc.close();
     }
 }

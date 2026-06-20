@@ -36,5 +36,7 @@ public class Question_18 {
         } else {
             System.out.println("given number is not strong number");
         }
+
+        sc.close();
     }
 }

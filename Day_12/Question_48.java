@@ -25,5 +25,7 @@ public class Question_48 {
 
         System.out.println("Enter a number ");
         checkPerfect(sc.nextInt());
+
+        sc.close();
     }
 }

@@ -14,12 +14,15 @@ public class Question_24 {
 
         if (x == 0 && n == 0) {
             System.out.println("x^n = not definite");
+            sc.close();
             return;
         } else if (x == 0) {
             System.out.println("x^n = 0");
+            sc.close();
             return;
         } else if (n == 0) {
             System.out.println("x^n = 1");
+            sc.close();
             return;
         } else if (n > 0) {
             for (int i = 1; i <= n; i++) {
@@ -32,5 +35,7 @@ public class Question_24 {
         }
 
         System.out.println("x^n = " + power);
+
+        sc.close();
     }
 }

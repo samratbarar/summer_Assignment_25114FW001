@@ -20,9 +20,12 @@ public class Question_25 {
 
         if (num < 0) {
             System.out.println("The factorial is not defined for negative numbers ");
+            sc.close();
             return;
         }
 
         System.out.println("The factorial of given number is " + factorial(num));
+
+        sc.close();
     }
 }

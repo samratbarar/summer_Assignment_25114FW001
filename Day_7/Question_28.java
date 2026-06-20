@@ -19,5 +19,7 @@ public class Question_28 {
         int num = sc.nextInt();
 
         System.out.println("The reverse of given number is " + revNum(num, 0));
+
+        sc.close();
     }
 }

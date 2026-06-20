@@ -13,6 +13,7 @@ public class Question_20 {
 
         if (num <= 1) {
             System.out.println("Given number has no prime factors");
+            sc.close();
             return;
         }
 
@@ -37,5 +38,7 @@ public class Question_20 {
         if (count == -1) {
             System.out.println("The largest prime factor of given number is " + num);
         }
+
+        sc.close();
     }
 }

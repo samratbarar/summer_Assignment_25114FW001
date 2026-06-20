@@ -28,5 +28,7 @@ public class Question_47 {
 
         System.out.println("Enter first and second term of series and no of terms");
         printFibo(sc.nextInt(), sc.nextInt(), sc.nextInt());
+
+        sc.close();
     }
 }

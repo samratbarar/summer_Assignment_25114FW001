@@ -30,5 +30,7 @@ public class Question_15 {
         } else {
             System.out.println("Given number is not armstrong number ");
         }
+
+        sc.close();
     }   
 }

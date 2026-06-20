@@ -17,5 +17,7 @@ public class Question_3 {
         }
          
         System.out.println("The Factorial of " + num + " is " + fact);
+
+        sc.close();
     }   
 }

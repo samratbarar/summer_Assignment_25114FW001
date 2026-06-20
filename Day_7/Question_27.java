@@ -20,5 +20,7 @@ public class Question_27 {
         int num = sc.nextInt();
 
         System.out.println("The sum of digits of given number is " + sumOfDigits(num));
+
+        sc.close();
     } 
 }

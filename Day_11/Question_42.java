@@ -28,5 +28,7 @@ public class Question_42 {
         }
         
         System.out.println("The maximum number is " + max(arr));
+
+        sc.close();
     }
 }

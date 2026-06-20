@@ -19,5 +19,7 @@ public class Question_7 {
         }
          
         System.out.println("The product of digits of given number is " + product);
+
+        sc.close();
     }
 }

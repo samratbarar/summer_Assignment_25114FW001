@@ -13,5 +13,7 @@ public class Question_41 {
 
         System.out.println("Enter two numbers");
         System.out.println("The sum of two numbers is " + sum(sc.nextInt(), sc.nextInt()));
+
+        sc.close();
     }
 }

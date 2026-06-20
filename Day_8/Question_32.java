@@ -26,5 +26,7 @@ public class Question_32 {
 
             System.out.println();
         }
+
+        sc.close();
     }
 }

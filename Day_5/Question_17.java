@@ -23,5 +23,7 @@ public class Question_17 {
         } else {
             System.out.println("Given number is not perfect number ");
         }
+
+        sc.close();
     }
 }

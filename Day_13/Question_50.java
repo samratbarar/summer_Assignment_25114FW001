@@ -29,5 +29,7 @@ public class Question_50 {
         float avg = (float)sum / length;
 
         System.out.println("Sum and average of array are " + sum + " and " + avg);   
+
+        sc.close();
     }
 }

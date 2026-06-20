@@ -27,5 +27,7 @@ public class Question_49 {
                 System.out.print(", ");
             }
         }
+
+        sc.close();
     }
 }

@@ -24,6 +24,8 @@ public class Question_1 {
         int N1 = sc.nextInt();
 
         System.out.println("The sum of first N1 natual number is " + (N1*(N1+1))/2);
+
+        sc.close();
         
         // The value of N1 is integer so if even is given then it completely divided by 2
         // if given number is odd then N1 + 1 term will be even which further divided by 2

@@ -13,6 +13,7 @@ public class Question_19 {
 
         if (num == 0) {
             System.out.println("Given number is zero which have infinte fractors");
+            sc.close();
             return;
         } else {
             if (num < 0) {
@@ -25,6 +26,8 @@ public class Question_19 {
             }
 
             System.out.print(num + "," + -1*num);
+
+            sc.close();
         }
     }
 }

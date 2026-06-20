@@ -28,5 +28,7 @@ public class Question_31 {
 
             System.out.println();
         }
+
+        sc.close();
     }
 }

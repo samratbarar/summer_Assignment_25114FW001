@@ -18,5 +18,7 @@ public class Question_4 {
         }
 
         System.out.println("The number of digits present in given number is " + count);
+
+        sc.close();
     }  
 }

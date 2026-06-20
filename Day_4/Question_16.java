@@ -29,6 +29,8 @@ public class Question_16 {
             if (i == sum) {
                 System.out.print(i + " ");
             }
+
+            sc.close();
         }
     }
 }

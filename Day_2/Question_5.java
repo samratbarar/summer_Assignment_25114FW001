@@ -19,5 +19,7 @@ public class Question_5 {
         }
 
         System.out.println("The sum of the digits of given number is " + sum);
+
+        sc.close();
     }
 }

@@ -31,5 +31,7 @@ public class Question_46 {
 
         System.out.println("Enter a number ");
         checkArmstrong(sc.nextInt());
+
+        sc.close();
     }
 }

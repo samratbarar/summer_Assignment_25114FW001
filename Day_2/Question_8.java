@@ -24,5 +24,7 @@ public class Question_8 {
         } else {
             System.out.println("Given number is not palindrome number ");
         }
+
+        sc.close();
     }
 }

@@ -25,5 +25,7 @@ public class Question_45 {
         int num = sc.nextInt();
 
         checkPalidrome(num, 0, num);
+
+        sc.close();
     }   
 }

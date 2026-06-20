@@ -31,6 +31,7 @@ public class Question_38 {
             
             System.out.println();
         }
+
+        sc.close();
     }
-    
 }

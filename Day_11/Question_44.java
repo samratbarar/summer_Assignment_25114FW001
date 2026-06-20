@@ -24,5 +24,7 @@ public class Question_44 {
             System.out.println("factorial is not defined for negative numbers");
         } else 
         System.out.println("The factorial of given number is " + fact);
+
+        sc.close();
     }
 }

@@ -21,5 +21,7 @@ public class Question_14 {
         }
 
         System.out.println("The nth term of the fibonacci is " + nextTerm);
+
+        sc.close();
     }
 }

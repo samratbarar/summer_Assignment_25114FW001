@@ -25,5 +25,7 @@ public class Question_13 {
             secondTerm = nextTerm;
             System.out.print(nextTerm + " ");
         }
+
+        sc.close();
     }
 }

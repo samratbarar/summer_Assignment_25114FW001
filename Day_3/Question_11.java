@@ -24,5 +24,7 @@ public class Question_11 {
         }
 
         System.out.println("The GCD of given numbers is " + gcd);
+
+        sc.close();
     }
 }

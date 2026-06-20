@@ -32,5 +32,7 @@ public class Question_51 {
         }
 
         System.out.println("The largest and smallest elements are " + largest + " and " + smallest);
+        
+        sc.close();
     }
 }

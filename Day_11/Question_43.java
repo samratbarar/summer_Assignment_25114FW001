@@ -25,5 +25,7 @@ public class Question_43 {
 
         System.out.println("Enter the number");
         primeNUMChecker(sc.nextInt());
+
+        sc.close();
     }
 }

@@ -35,6 +35,8 @@ public class Question_12 {
 
         System.out.println("The LCM of given numbers is " + lcm);
 
+        sc.close();
+
         // second way is usd formula after calculating gcd 
         /*
         LCM(a,b) = a*b / GCD(a,b)

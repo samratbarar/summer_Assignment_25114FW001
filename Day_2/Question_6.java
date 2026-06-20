@@ -18,6 +18,8 @@ public class Question_6 {
             num /= 10;
         }
 
-        System.out.println("The reverse of given number is " + revNum);     
+        System.out.println("The reverse of given number is " + revNum); 
+        
+        sc.close();
     }
 }

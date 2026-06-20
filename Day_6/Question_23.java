@@ -32,5 +32,7 @@ public class Question_23 {
         }
 
         System.out.println("The number of set bits in given number is " + count);
+
+        sc.close();
     }
 }

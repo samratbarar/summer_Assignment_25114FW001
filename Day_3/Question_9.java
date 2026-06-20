@@ -25,5 +25,7 @@ public class Question_9 {
         }else {
             System.out.println("Entered number is prime");
         }
+
+        sc.close();
     }
 }
