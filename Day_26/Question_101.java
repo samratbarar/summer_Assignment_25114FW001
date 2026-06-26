@@ -4,12 +4,12 @@ import java.util.*;
 
 // Write a program to Create number guessing game.
 
-class Game {
+class NumberGuessingGame {
     private int ranNum;
     private int userNum;
     private int noOfGuesses;
 
-    public Game() {
+    public NumberGuessingGame() {
         Random ran = new Random();
         ranNum = ran.nextInt(101);
     }
@@ -30,7 +30,7 @@ class Game {
         return noOfGuesses;
     }
 
-    public void guessTheNumber() {
+    public void checkGuess() {
         if (userNum > ranNum) {
             System.out.println("Entered number is greater");
         } else if (userNum < ranNum) {
@@ -44,16 +44,16 @@ class Game {
 public class Question_101 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Game GuessTheNumber = new Game();
+        NumberGuessingGame game = new NumberGuessingGame();
 
         do {
             System.out.println("Guess the number between 0 to 100");
-            GuessTheNumber.takeUserInput(sc.nextInt());
-            GuessTheNumber.guessTheNumber();
-            GuessTheNumber.incrementNoOfGuesses();
-        } while (!GuessTheNumber.isCorrectNumber());
+            game.takeUserInput(sc.nextInt());
+            game.incrementNoOfGuesses();
+            game.checkGuess();
+        } while (!game.isCorrectNumber());
 
-        System.out.println("The number of guesses is " + GuessTheNumber.getNoOfGuesses());
+        System.out.println("The number of guesses is " + game.getNoOfGuesses());
 
         sc.close();
     }
