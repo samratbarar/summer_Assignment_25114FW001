@@ -115,8 +115,14 @@ public class Question_103 {
 
         System.out.println("Enter your bank name");
         ATM machine = new ATM(sc.nextLine(), sc);
-        machine.greet();
-        machine.functioning(sc.nextInt());
+
+        do {
+            machine.greet();
+            machine.functioning(sc.nextInt());
+            System.out.println("If you want to do another action\nEnter 1 otherwise Enter any number");
+        } while (sc.nextInt() == 1);
+        
+        System.out.println("Thank you for using our ATM");
 
         sc.close();
     }
