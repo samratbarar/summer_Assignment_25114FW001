@@ -6,19 +6,20 @@ import java.util.*;
 
 class ATM {
     private Scanner sc;
-    private String bankName;
     private int atmCash = 100000;
     private int userBalance = 2000000;
     private int userPin = 1234;
     private final int otp = 23214;
 
-    public ATM(String name, Scanner sc) {
-        this.bankName = name;
+    public ATM(Scanner sc) {
         this.sc = sc;
     }
 
     public void greet() {
-        System.out.println("Welcome to our " + bankName + " ATM");
+        System.out.println("Welcome to our ATM");
+    }
+
+    public void menu() {
         System.out.println("Please Enter the option number to select it");
         System.out.println("1 -> Cash Withdrawal\n2 -> Check balance\n3 -> Change pin\n4 -> Green pin");
     }
@@ -113,11 +114,11 @@ public class Question_103 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter your bank name");
-        ATM machine = new ATM(sc.nextLine(), sc);
+        ATM machine = new ATM(sc);
+        machine.greet();
 
         do {
-            machine.greet();
+            machine.menu();
             machine.functioning(sc.nextInt());
             System.out.println("If you want to do another action\nEnter 1 otherwise Enter any number");
         } while (sc.nextInt() == 1);
