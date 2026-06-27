@@ -77,6 +77,14 @@ class Records {
             System.out.println("Roll number not found");
         }
     }
+
+    public void deleteStudent(int rollNum) {
+        if (students.remove(rollNum) != null) {
+            System.out.println("Student deleted successfully.");
+        } else {
+            System.out.println("Roll number not found.");
+        }
+    }
 }
 
 public class Question_105 {
@@ -91,6 +99,7 @@ public class Question_105 {
             System.out.println("2 -> Get information of a student");
             System.out.println("3 -> Get list of all students");
             System.out.println("4 -> Correct information of a student");
+            System.out.println("5 -> Delete student information");
 
             switch (sc.nextInt()) {
                 case 1 -> {
@@ -126,6 +135,11 @@ public class Question_105 {
                     int standard = sc.nextInt();
                     details student = new details(name, gender, standard);
                     school.correction(rollNum, student);
+                }
+
+                case 5 -> {
+                    System.out.println("Enter roll number to delete:");
+                    school.deleteStudent(sc.nextInt());
                 }
 
                 default -> System.out.println("Invalid option");
