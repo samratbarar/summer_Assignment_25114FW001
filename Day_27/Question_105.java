@@ -4,32 +4,78 @@ import java.util.*;
 
 // Write a program to Create student record management system.
 
+class details {
+    private String name;
+    private char gender;
+    private int standard;
+
+    public details(String name, char gender, int standard) {
+        this.name = name;
+        this.gender = gender;
+        this.standard = standard;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public char getGender() {
+        return gender;
+    }
+
+    public int getStandard() {
+        return standard;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setGender(char gender) {
+        this.gender = gender;
+    }
+
+    public void setStandard(int standard) {
+        this.standard = standard;
+    }
+
+    @Override
+    public String toString() {
+        return "Name: " + name + ", Gender: " + gender + ", Class: " + standard;
+    }
+}
+
 class Records {
-    private HashMap<Integer, String> students = new HashMap<>();
+    private HashMap<Integer, details> students = new HashMap<>();
     private int rollNum;
 
-    public String getStudentInfo(int rollNum) {
+    public details getStudentInfo(int rollNum) {
         return students.get(rollNum);
     }
 
-    public int addStudentInfo(String name) {
+    public int addStudentInfo(details student) {
         rollNum++;
-        students.put(this.rollNum, name);
-
+        students.put(this.rollNum, student);
         return rollNum;
     }
 
     public void getTotalStudentsList() {
-        System.out.println(students);
+        if (students.isEmpty()) {
+            System.out.println("No students found.");
+            return;
+        }
+        for (Map.Entry<Integer, details> entry : students.entrySet()) {
+            System.out.println("Roll No: " + entry.getKey() + " -> " + entry.getValue());
+        }
     }
 
-    public void correctionInName(int rollNum, String name) {
+    public void correction(int rollNum, details student) {
         if (students.containsKey(rollNum)) {
-           students.put(rollNum, name);
-           System.out.println("Updation is successfull"); 
+            students.put(rollNum, student);
+            System.out.println("Updation is successful");
         } else {
-            System.out.println("Roll number is not found");
-        } 
+            System.out.println("Roll number not found");
+        }
     }
 }
 
@@ -39,31 +85,53 @@ public class Question_105 {
         Records school = new Records();
 
         do {
-            System.out.println("Welcome to student records\nEnter the option number to perform respective task");
-            System.out.println("1 -> To add new student infomation\n2 -> To get information of a student\n3 -> To get list of all students\n4 -> To correct information of student");
+            System.out.println("\nWelcome to student records");
+            System.out.println("Enter the option number to perform respective task");
+            System.out.println("1 -> Add new student information");
+            System.out.println("2 -> Get information of a student");
+            System.out.println("3 -> Get list of all students");
+            System.out.println("4 -> Correct information of a student");
 
             switch (sc.nextInt()) {
                 case 1 -> {
-                    System.out.println("Enter the name of student");
-                    System.out.println("The Roll number of new student is " + school.addStudentInfo(sc.nextLine()));
+                    System.out.println("Enter the name, gender (M/F), and class of student:");
+                    sc.nextLine(); // consume newline
+                    String name = sc.nextLine();
+                    char gender = sc.next().charAt(0);
+                    int standard = sc.nextInt();
+                    details student = new details(name, gender, standard);
+                    System.out.println("The Roll number of new student is " + school.addStudentInfo(student));
                 }
 
-                case 2 -> System.out.println("Enter the roll number of student " + school.getStudentInfo(sc.nextInt()));
+                case 2 -> {
+                    System.out.println("Enter the roll number of student:");
+                    int roll = sc.nextInt();
+                    details info = school.getStudentInfo(roll);
+                    if (info != null) {
+                        System.out.println("Student Info -> " + info);
+                    } else {
+                        System.out.println("Roll number not found!");
+                    }
+                }
 
                 case 3 -> school.getTotalStudentsList();
 
                 case 4 -> {
-                    System.out.println("Enter the roll number and correction in name");
+                    System.out.println("Enter the roll number:");
                     int rollNum = sc.nextInt();
-                    sc.nextLine();
+                    sc.nextLine(); // consume newline
+                    System.out.println("Enter the name, gender (M/F), and class of student:");
                     String name = sc.nextLine();
-                    school.correctionInName(rollNum, name);
+                    char gender = sc.next().charAt(0);
+                    int standard = sc.nextInt();
+                    details student = new details(name, gender, standard);
+                    school.correction(rollNum, student);
                 }
 
                 default -> System.out.println("Invalid option");
             }
 
-            System.out.println("If you want to continue Enter 1 else 0 to exit");
+            System.out.println("Enter 1 to continue, 0 to exit:");
         } while (sc.nextInt() == 1);
 
         sc.close();
